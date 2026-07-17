@@ -37,6 +37,7 @@ nav ul{
 }
 nav ul li a{
     margin-left: 20px;
+    margin-right: auto;
     color: aliceblue;
     text-decoration: none;
     font-size: 0.9rem;
