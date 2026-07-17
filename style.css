@@ -356,10 +356,7 @@ a.contact-text:hover {
    ========================================================================== */
 
 /* This locks down the entire screen structure so it cannot slide left or right */
-html, body {
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-}
+
 
 @media screen and (max-width: 768px) {
     body {
@@ -372,7 +369,6 @@ html, body {
         position: static;
         padding: 10px 0 !important; /* Removes side padding so menu has max width */
         width: 100%;
-        overflow: hidden;
     }
 
     nav ul {
@@ -477,7 +473,7 @@ html, body {
     }
 
     /* Target the specific container or link holding your email address */
-    [href^="mailto:"], 
+    [href^="#"], 
     .contact-info,
     main p:has(a) { 
         font-size: 0.85rem !important; /* Shrinks the text slightly so it fits the screen width */
