@@ -352,74 +352,124 @@ a.contact-text:hover {
     
 
 /* ==========================================================================
-   2. COMBINED MOBILE STYLES (Fixes Navigation & Stops Side-Scrolling)
+   2. COMBINED MOBILE STYLES (Clean Menu Bar Dropdown & Layout Restructure)
    ========================================================================== */
 
+/* This locks down the entire screen structure so it cannot slide left or right */
+
+
 @media screen and (max-width: 768px) {
+    /* Safe layout resets to protect card boundaries from cutting off */
     html, body, .container, .wrapper, #root, div:has(main) {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
-        overflow-x: hidden !important; /* Forces layout to stay strictly vertical */
+        overflow-x: hidden !important;
         box-sizing: border-box !important;
     }
 
     body {
-        padding: 10px 0px !important;
+        padding: 10px 0px;
         min-height: auto;
         width: 100%;
     }
 
-    /* 1. NAV BAR FIXES (Perfect Grid Alignment Forces Zero Right Gap) */
+    /* 1. MENU BAR OVERLAY ENGINE */
     header {
-        position: static;
-        padding: 10px 0 !important; 
+        position: relative !important;
+        padding: 15px 20px !important; /* Side padding pushes the button neatly from the edge */
         width: 100%;
         margin: 0;
+        display: flex !important;
+        justify-content: flex-end !important; /* Pushes the menu icon to the right side */
+        box-sizing: border-box;
     }
     
     nav {
-        width: 100%;
+        position: relative;
+        width: auto;
         margin: 0;
         padding: 0;
     }
 
-    nav ul {
-        display: flex !important;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center !important;
-        list-style: none !important;
-        width: 100% !important;
-        padding: 0 4px !important;
-        margin: 0 !important;
-        box-sizing: border-box !important;
-    }
-
-    nav ul li {
-        margin: 0 !important;
-        padding: 0 !important;
-        flex: 1 auto;
-        text-align: center !important;
-    }
-
-    nav ul li a {
-        font-size: 0.85rem !important; 
-        letter-spacing: 0px;
-        white-space: nowrap !important; 
-        display: inline-block !important;
-        padding: 4px 0 !important;
-    }
-    nav ul li a.current-page{
+    /* Hides the structural logic checkbox completely */
+    .menu-checkbox {
         display: none !important;
+    }
+
+    /* Styling the clickable Menu Bar Icon (3 horizontal lines) */
+    .menu-bar-button {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 28px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .menu-bar-button span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #ffffff; /* White bars—change this color to match your theme if needed */
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    /* Turns your ul list into a hidden, stackable vertical drawer container */
+    nav ul.nav-links {
+        display: none !important; /* Stays hidden out of sight until toggled open */
+        flex-direction: column !important; 
+        position: absolute;
+        top: 35px;
+        right: 0;
+        background-color: #111625; /* Dark dropdown background card matching your layout */
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 12px;
+        width: 180px;
+        padding: 10px 0 !important;
+        margin: 0 !important;
+        list-style: none;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+        z-index: 999;
+    }
+
+    nav ul.nav-links li {
+        margin: 0 !important;
+        padding: 0;
+        width: 100%;
+        text-align: left !important; /* Align link text nicely inside the dropdown drawer */
+    }
+
+    nav ul.nav-links li a {
+        display: block !important;
+        padding: 12px 20px !important;
+        font-size: 0.95rem !important; /* Bumps up font size since it has vertical room */
+        color: #ffffff !important;
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+        white-space: nowrap;
+    }
+
+    /* Subtle background highlight for the page you are currently viewing */
+    nav ul.nav-links li a.current-page {
+        background-color: rgba(255, 255, 255, 0.08) !important;
+        font-weight: bold;
+    }
+
+    /* THE MAGIC CSS HOOK: When the hamburger icon label is tapped, display the list instantly */
+    .menu-checkbox:checked ~ ul.nav-links {
+        display: flex !important;
     }
 
     /* 2. SIDE-SCROLLING CARD CONTAINER FIXES */
     main {
-        width: 92% !important;
+        width: 92% !important; /* Pulled slightly down from 100% so the border lines never cut off */
         max-width: 92% !important;
-        margin: 15px auto !important;
-        box-sizing: border-box !important; 
+        margin: 15px auto !important; /* Centers the main cards perfectly on screen */
+        box-sizing: border-box !important; /* Forces padding to stay inside the boundary */
         padding: 25px 20px !important; 
         border-radius: 30px;
         height: auto;
@@ -462,7 +512,6 @@ a.contact-text:hover {
         display: block !important;
         margin: 0 auto !important;
     }
-
     iframe, video, embed {
         width: 100%;
         max-width: 100%;
@@ -470,41 +519,40 @@ a.contact-text:hover {
         border-radius: 10px;
     }
 
-    /* 4. ACADEMIC PLANNER FIXED RULES */
     .planner-input {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 12px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+        box-sizing: border-box;
     }
-
-    /* BUG FIXED HERE: Added comma so styles apply to both inputs and dropdown selectors */
+    
+    /* BUG FIXED HERE: Added the missing comma so both inputs and dropdowns expand correctly */
     .planner-input input,
     .planner-input select {
-        width: 96% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
+        width: 96%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .planner-input button {
-        width: auto !important;
-        min-width: 110px !important;
-        max-width: 140px !important;
-        padding: 8px 12px !important;
-        font-size: 0.82rem !important;
-        margin: 0 auto !important;
+        width: auto;
+        min-width: 110px;
+        max-width: 140px;
+        padding: 8px 12px;
+        font-size: 0.82rem;
+        margin: 0 auto;
     }
 
-    /* 3. EMAIL SPILLING FIX (Forces structural breaks) */
+    /* 3. EMAIL SPILLING FIX (Shrinks font size so it stays whole on one line) */
     .contact-info a, 
     .contact-details p,
     main p a,
     .email-text {
-        font-size: 0.9rem !important;
-        white-space: normal !important;
-        word-wrap: break-word !important;
-        word-break: break-all !important;
+        font-size: 0.9rem;
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: break-all;
     }
 }
