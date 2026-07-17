@@ -378,24 +378,24 @@ a.contact-text:hover {
     nav ul {
         display: flex !important;
         flex-direction: row !important; /* Keeps them side-by-side */
-        justify-content: space-between!important; /* Centers the whole menu row */
+        justify-content: center!important; /* Centers the whole menu row */
         align-items: center !important;
         list-style: none;
         width: 100%;
-        padding: 0 8px !important;
+        padding: 0 4px !important;
         box-sizing: border-box;
         margin: 0;
-        gap: 0px !important; /* Clean, tight space between links so they fit */
+        gap: 8px !important; /* Clean, tight space between links so they fit */
     }
 
     nav ul li {
         margin: 0 !important;
-        flex: 1;
+        flex: 0 1auto;
         text-align: center;
     }
 
     nav ul li a {
-        font-size: 0.82rem !important; /* Scales text down slightly to fit phone screens */
+        font-size: 0.79rem !important; /* Scales text down slightly to fit phone screens */
         letter-spacing: 0.1px;
         white-space: nowrap; /* Prevents text from breaking onto a second row */
         display: inline-block;
