@@ -356,77 +356,74 @@ a.contact-text:hover {
    ========================================================================== */
 
 @media screen and (max-width: 768px) {
-    /* Reset every outer container block to prevent right-edge blowout */
     html, body, .container, .wrapper, #root, div:has(main) {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
         padding: 0 !important;
-        overflow-x: hidden !important; 
+        overflow-x: hidden !important; /* Forces layout to stay strictly vertical */
         box-sizing: border-box !important;
     }
 
     body {
         padding: 10px 0px !important;
         min-height: auto;
+        width: 100%;
     }
 
-    /* 1. NAV BAR FIXES (Slightly smaller text + tight compact gaps) */
+    /* 1. NAV BAR FIXES (Perfect Grid Alignment Forces Zero Right Gap) */
     header {
-        position: static !important;
-        padding: 12px 0 !important; 
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        box-sizing: border-box !important;
-        display: flex !important;
-        justify-content: center !important; /* Centers the whole block */
+        position: static;
+        padding: 10px 0 !important; 
+        width: 100%;
+        margin: 0;
     }
     
     nav {
-        width: auto !important; /* Let it wrap snugly around the links */
-        max-width: 100% !important;
-        margin: 0 auto !important;
-        padding: 0 !important;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     nav ul {
         display: flex !important;
-        flex-direction: row !important;
-        justify-content: center !important; /* Groups links cleanly in the center */
+        flex-direction: row;
+        justify-content: space-evenly;
         align-items: center !important;
         list-style: none !important;
-        width: auto !important;
-        padding: 0 8px !important;
-        margin: 0 auto !important;
+        width: 100% !important;
+        padding: 0 4px !important;
+        margin: 0 !important;
         box-sizing: border-box !important;
-        gap: 6px !important; /* Squishes buttons tightly together with a nice little gap */
     }
 
     nav ul li {
         margin: 0 !important;
         padding: 0 !important;
-        flex: 0 0 auto !important; /* Allows them to pack closely based on text size */
+        flex: 1 auto;
+        text-align: center !important;
     }
 
     nav ul li a {
-        font-size: 0.74rem !important; /* Made text smaller to guarantee Home fits easily */
-        letter-spacing: -0.2px !important; /* Pulls letters slightly closer to save horizontal width */
+        font-size: 0.85rem !important; 
+        letter-spacing: 0px;
         white-space: nowrap !important; 
         display: inline-block !important;
-        padding: 4px 6px !important; /* Small side cushion for clean target taps */
+        padding: 4px 0 !important;
+    }
+    nav ul li a.current-page{
+        display: none;
     }
 
-    /* 2. CARD CONTAINER FIXES */
-    main, section {
-        width: 92% !important; 
+    /* 2. SIDE-SCROLLING CARD CONTAINER FIXES */
+    main {
+        width: 92% !important;
         max-width: 92% !important;
-        margin: 15px auto !important; 
+        margin: 15px auto !important;
         box-sizing: border-box !important; 
-        padding: 25px 16px !important; 
-        border-radius: 24px !important;
-        height: auto !important;
-        float: none !important; 
+        padding: 25px 20px !important; 
+        border-radius: 30px;
+        height: auto;
     }
 
     #home {
@@ -434,29 +431,29 @@ a.contact-text:hover {
         flex-direction: column !important; 
         align-items: center !important;
         text-align: center !important;
-        gap: 25px !important;
+        gap: 25px;
     }
 
     .intro-text {
-        max-width: 100% !important;
+        max-width: 100%;
     }
 
     h1 {
-        font-size: 2.2rem !important;
+        font-size: 2.2rem;
     }
 
     .creative-text {
-        font-size: 0.9rem !important;
+        font-size: 0.9rem;
     }
 
     .tags {
-        justify-content: center !important;
+        justify-content: center;
     }
 
     .profile-pic-container {
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .profile-pic {
@@ -468,10 +465,10 @@ a.contact-text:hover {
     }
 
     iframe, video, embed {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: 200px !important;
-        border-radius: 10px !important;
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+        border-radius: 10px;
     }
 
     /* 4. ACADEMIC PLANNER FIXED RULES */
@@ -484,6 +481,7 @@ a.contact-text:hover {
         box-sizing: border-box !important;
     }
 
+    /* BUG FIXED HERE: Added comma so styles apply to both inputs and dropdown selectors */
     .planner-input input,
     .planner-input select {
         width: 96% !important;
@@ -500,7 +498,7 @@ a.contact-text:hover {
         margin: 0 auto !important;
     }
 
-    /* 3. EMAIL SPILLING FIX */
+    /* 3. EMAIL SPILLING FIX (Forces structural breaks) */
     .contact-info a, 
     .contact-details p,
     main p a,
