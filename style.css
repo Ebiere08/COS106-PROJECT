@@ -90,7 +90,7 @@ main h2{
 
 
 img{
-    max-width: 100%;
+    max-width: 100;
     width: 295PX;
     height: 380px;
     object-fit: cover;
@@ -347,35 +347,77 @@ a.contact-text:hover {
     box-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
 }
 
-@media scren and (max-idth: 768px) {
-     
-#home{
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
 
-nav ul{
-position: static;
-justify-content: center;
-padding: 10px 0;
-}
 
-#planner h2, .contact-card-title{
-    font-size: 2.2rem;
-}
 
-#about h2{
-    font-size: 2rem;
-}
     
-#planner .planner-input input{
-    width: 100%;
-    margin-bottom: 10px;
-}
 
-#planner .planner-input button{
-    width: 100%;
-    margin-left: 0;
-}
+/* ==========================================================================
+   2. FIXED MOBILE STYLES (Keeps laptop untouched, fixes phone views)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        min-height: auto;
+    }
+
+    header {
+        position: static;
+        padding: 20px 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    main {
+        width: 100%;
+        padding: 20px;
+        margin-top: 10px;
+    }
+
+    #home {
+        flex-direction: column-reverse; /* Stacks image beautifully below text on phones */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .intro-text {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .creative-text {
+        font-size: 0.9rem;
+    }
+
+    .tags {
+        justify-content: center;
+    }
+
+    /* Scales the portrait photo crop down safely for phones so it looks normal */
+    .profile-pic {
+        width: 100% !important;
+        max-width: 250px !important;   
+        height: 340px !important;      
+        object-fit: cover !important;  
+    }
+
+    .planner-input {
+        flex-direction: column;
+    }
+
+    .planner-input button {
+        padding: 15px;
+    }
 }
