@@ -347,6 +347,9 @@ a.contact-text:hover {
     box-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
 }
 
+@media (max-idth: 768px) {
+    
+
 #home{
     flex-direction: column;
     align-items: center;
@@ -375,4 +378,5 @@ padding: 10px 0;
 #planner .planner-input button{
     width: 100%;
     margin-left: 0;
+}
 }
