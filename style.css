@@ -444,6 +444,12 @@ html, body {
         display: block !important;
         margin: 0 auto !important;
     }
+    iframe, video, embed {
+        width: 100%;
+        max-width: 100%;
+        height: 200px;
+        border-radius: 10px;
+    }
 
     .planner-input {
         flex-direction: column;
