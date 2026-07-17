@@ -355,62 +355,66 @@ a.contact-text:hover {
    2. COMBINED MOBILE STYLES (Fixes Navigation & Stops Side-Scrolling)
    ========================================================================== */
 
-/* This locks down the entire screen structure so it cannot slide left or right */
-
-
 @media screen and (max-width: 768px) {
-    body {
-        padding: 10px 0px;
-        min-height: auto;
-        width: 100%;
+    html, body {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow-x: hidden !important; /* Forces layout to stay strictly vertical */
+        box-sizing: border-box !important;
     }
 
-    /* 1. NAV BAR FIXES (Keeps all links on one line without scattering) */
+    body {
+        padding: 10px 0px !important;
+        min-height: auto;
+    }
+
+    /* 1. NAV BAR FIXES (Perfect Grid Alignment Forces Zero Right Gap) */
     header {
         position: static;
-        padding: 10px 0 !important; /* Removes side padding so menu has max width */
+        padding: 10px 0 !important; 
         width: 100%;
         margin: 0;
     }
-    nav{
+    
+    nav {
         width: 100%;
         margin: 0;
         padding: 0;
     }
 
     nav ul {
-        display: flex !important;
-        flex-direction: row !important; /* Keeps them side-by-side */
-        justify-content: space-evenly!important; /* Centers the whole menu row */
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr) !important; /* Divides display perfectly into 5 columns */
         align-items: center !important;
-        list-style: none;
-        width: 100%;
-        padding: 0 4px !important;
-        box-sizing: border-box;
-        margin: 0 ;
+        list-style: none !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
     }
 
     nav ul li {
         margin: 0 !important;
-        padding: 0;
-        flex: 1 auto;
-        text-align: center;
+        padding: 0 !important;
+        text-align: center !important;
     }
 
     nav ul li a {
-        font-size: 0.78rem !important; /* Scales text down slightly to fit phone screens */
+        font-size: 0.76rem !important; 
         letter-spacing: 0px;
-        white-space: nowrap; /* Prevents text from breaking onto a second row */
-        display: inline-block;
-        padding: 4px 0;
+        white-space: nowrap !important; 
+        display: inline-block !important;
+        padding: 4px 0 !important;
     }
 
     /* 2. SIDE-SCROLLING CARD CONTAINER FIXES */
     main {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 15px 0;
-        box-sizing: border-box !important; /* Forces padding to stay inside the boundary */
+        margin: 15px 0 !important;
+        box-sizing: border-box !important; 
         padding: 25px 20px !important; 
         border-radius: 30px;
         height: auto;
@@ -453,6 +457,7 @@ a.contact-text:hover {
         display: block !important;
         margin: 0 auto !important;
     }
+
     iframe, video, embed {
         width: 100%;
         max-width: 100%;
@@ -460,44 +465,41 @@ a.contact-text:hover {
         border-radius: 10px;
     }
 
+    /* 4. ACADEMIC PLANNER FIXED RULES */
     .planner-input {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        width: 100%;
-        box-sizing: border-box;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
-    .planner-input input
-    .planner-input select{
-        width: 96%;
-        max-width: 100%;
-        box-sizing: border-box;
+
+    /* BUG FIXED HERE: Added comma so styles apply to both inputs and dropdown selectors */
+    .planner-input input,
+    .planner-input select {
+        width: 96% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .planner-input button {
-        width: auto;
-        min-width: 110px;
-        max-width: 140px;
-        padding: 8px 12px;
-        font-size: 0.82rem;
-        margin: 0 auto;
+        width: auto !important;
+        min-width: 110px !important;
+        max-width: 140px !important;
+        padding: 8px 12px !important;
+        font-size: 0.82rem !important;
+        margin: 0 auto !important;
     }
 
-
-
-
-
-    /* 3. EMAIL SPILLING FIX (Shrinks font size so it stays whole on one line) */
+    /* 3. EMAIL SPILLING FIX (Forces structural breaks) */
     .contact-info a, 
     .contact-details p,
-    main p  a,
+    main p a,
     .email-text {
-        font-size: 0.9rem;
-        white-space: normal;
-        word-wrap: break-word;
-        word-break: break-all;
+        font-size: 0.9rem !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        word-break: break-all !important;
     }
-
-
 }
