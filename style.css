@@ -373,6 +373,8 @@ a.contact-text:hover {
     }
     nav{
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     nav ul {
@@ -384,19 +386,19 @@ a.contact-text:hover {
         width: 100%;
         padding: 0 4px !important;
         box-sizing: border-box;
-        margin: 0;
+        margin: 0 auto;
         gap: 8px !important; /* Clean, tight space between links so they fit */
     }
 
     nav ul li {
         margin: 0 !important;
-        flex: 0 1auto;
+        flex: 0 1 auto;
         text-align: center;
     }
 
     nav ul li a {
-        font-size: 0.79rem !important; /* Scales text down slightly to fit phone screens */
-        letter-spacing: 0.1px;
+        font-size: 0.80rem !important; /* Scales text down slightly to fit phone screens */
+        letter-spacing: 0px;
         white-space: nowrap; /* Prevents text from breaking onto a second row */
         display: inline-block;
     }
