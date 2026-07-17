@@ -352,15 +352,15 @@ a.contact-text:hover {
 
     
 
-
-   
-
-   
-  
-    
 /* ==========================================================================
-   2. FIXED MOBILE STYLES (Keeps laptop untouched, fixes phone views)
+   2. COMBINED MOBILE STYLES (Fixes Navigation & Stops Side-Scrolling)
    ========================================================================== */
+
+/* This locks down the entire screen structure so it cannot slide left or right */
+html, body {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+}
 
 @media screen and (max-width: 768px) {
     body {
@@ -368,21 +368,23 @@ a.contact-text:hover {
         min-height: auto;
     }
 
-    /* Fixes the navigation bar so links aren't scattered or dropping down */
+    /* 1. NAV BAR FIXES (Keeps all links on one line without scattering) */
     header {
         position: static;
-        padding: 15px 5px !important;
+        padding: 10px 0 !important; /* Removes side padding so menu has max width */
         width: 100%;
+        overflow: hidden;
     }
 
     nav ul {
         display: flex !important;
-        flex-direction: row !important; /* Forces them to stay in a straight line */
-        justify-content: space-around !important; /* Evenly spreads them across the screen */
+        flex-direction: row !important; /* Keeps them side-by-side */
+        justify-content: center !important; /* Centers the whole menu row */
         align-items: center !important;
         list-style: none;
         width: 100%;
-        gap: 5px !important;
+        padding: 0 5px !important;
+        gap: 10px !important; /* Clean, tight space between links so they fit */
     }
 
     nav ul li {
@@ -390,14 +392,20 @@ a.contact-text:hover {
     }
 
     nav ul li a {
-        font-size: 0.85rem !important; /* Slightly scales down text size so it all fits on one line */
+        font-size: 0.82rem !important; /* Scales text down slightly to fit phone screens */
+        letter-spacing: 0.3px;
+        white-space: nowrap; /* Prevents text from breaking onto a second row */
     }
 
+    /* 2. SIDE-SCROLLING CARD CONTAINER FIXES */
     main {
-        width: 100%;
-        padding: 20px;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important; /* Forces padding to stay inside the boundary */
+        padding: 15px !important; 
         margin-top: 15px;
         height: auto;
+        overflow-x: hidden; /* Safety lock on the container card itself */
     }
 
     #home {
@@ -438,14 +446,6 @@ a.contact-text:hover {
         margin: 0 auto !important;
     }
 
-    /* FIXES THE VIDEOS: Prevents embedded projects/YouTube videos from leaking out */
-    iframe, video, embed {
-        width: 100% !important;     /* Forces the video to stay within the card boundaries */
-        max-width: 100% !important;
-        height: 200px !important;   /* Proportional height for a phone screen */
-        border-radius: 10px;
-    }
-
     .planner-input {
         flex-direction: column;
     }
@@ -454,4 +454,3 @@ a.contact-text:hover {
         padding: 15px;
     }
 }
-   
