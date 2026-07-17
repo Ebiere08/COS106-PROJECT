@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>MY WEB PAGE</title>
+     <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <header>
+            <nav class="nav-links">
+                <ul>
+                   <li><a href="index.html">Home</a></li>
+                   <li><a href="about.html">About</a></li>
+                   <li><a href="projects.html">Projects</a></li>
+                   <li><a href="planner.html">Planner</a></li>
+                   <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+     <main>
+         <!--THIS SECTION IS FOR PLANNER -->
+            <section id="planner" class="card">
+               <h2>ACADEMIC PLANNER</h2>
+               <p>Manage your daily academic tasks below:</p>
+       
+                <div class="planner-input">
+                    <input type="text" id="taskInput"  list="categories" placeholder="Enter a new academic task...">
+                    <datalist id="categories">
+                       <option value="Study C Programming"></option>
+                       <option value="Revise Lecture Notes"></option>
+                       <option value="Complete Lab Assignment"></option>
+                       <option value="Practice Coding Challenges"></option>
+                       <option value="Prepare for Quiz"></option>
+                    </datalist>
+
+                    <button id="addTaskBtn">Add Task</button>
+                    <p id="validationMessage" style="color: #ef4444; font-size: 0.85rem; margin-top: 5px; display: none;">
+                    Please enter a task name!
+                    </p>
+                </div>
+                <br/>
+       
+                <table id="plannerTable">
+                  <tbody id="plannerTableBody"></tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+          <p class="footer-subtitle">Thanks for visiting!</p>
+          <p>&copy; 2026 Emmanuella Noble-Amadi</p>
+        </footer>
+       <script src="scripts.js"></script>
+    </body>
+</html>
