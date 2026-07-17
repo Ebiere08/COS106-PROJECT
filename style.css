@@ -360,8 +360,9 @@ a.contact-text:hover {
 
 @media screen and (max-width: 768px) {
     body {
-        padding: 10px 8px;
+        padding: 10px 0px;
         min-height: auto;
+        width: 100%;
     }
 
     /* 1. NAV BAR FIXES (Keeps all links on one line without scattering) */
@@ -370,36 +371,44 @@ a.contact-text:hover {
         padding: 10px 0 !important; /* Removes side padding so menu has max width */
         width: 100%;
     }
+    nav{
+        width: 100%;
+    }
 
     nav ul {
         display: flex !important;
         flex-direction: row !important; /* Keeps them side-by-side */
-        justify-content: center !important; /* Centers the whole menu row */
+        justify-content: space-between!important; /* Centers the whole menu row */
         align-items: center !important;
         list-style: none;
         width: 100%;
-        padding: 0 5px !important;
-        gap: 8px !important; /* Clean, tight space between links so they fit */
+        padding: 0 12px !important;
+        box-sizing: border-box;
+        margin: 0;
+        gap: 0px !important; /* Clean, tight space between links so they fit */
     }
 
     nav ul li {
-        margin-left: 0 !important;
+        margin: 0 !important;
+        flex: 1;
+        text-align: center;
     }
 
     nav ul li a {
         font-size: 0.82rem !important; /* Scales text down slightly to fit phone screens */
-        letter-spacing: 0.2px;
+        letter-spacing: 0.1px;
         white-space: nowrap; /* Prevents text from breaking onto a second row */
+        display: inline-block;
     }
 
     /* 2. SIDE-SCROLLING CARD CONTAINER FIXES */
     main {
-        width: 94% !important;
-        max-width: 480px !important;
-        margin: 15px auto;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 15px 0;
         box-sizing: border-box !important; /* Forces padding to stay inside the boundary */
-        padding: 20px 15px !important; 
-        margin-top: 15px;
+        padding: 25px 20px !important; 
+        border-radius: 30px;
         height: auto;
     }
 
@@ -467,16 +476,13 @@ a.contact-text:hover {
     /* 3. EMAIL SPILLING FIX (Shrinks font size so it stays whole on one line) */
     .contact-info a, 
     .contact-details p,
-    main p {
-        word-wrap: normal !important;
-        word-break: normal !important; /* Prevents text from chopping up */
+    main p  a,
+    .email-text {
+        font-size: 0.9rem;
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: break-all;
     }
 
-    /* Target the specific container or link holding your email address */
-    [href^="#"], 
-    .contact-info,
-    main p:has(a) { 
-        font-size: 0.85rem !important; /* Shrinks the text slightly so it fits the screen width */
-        white-space: nowrap;          /* Forces it to stay on one clean line */
-    }
+
 }
