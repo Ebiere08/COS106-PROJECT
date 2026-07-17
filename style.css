@@ -378,18 +378,19 @@ a.contact-text:hover {
     header {
         position: relative !important;
         padding: 15px 20px !important; /* Side padding pushes the button neatly from the edge */
-        width: 100%;
-        margin: 0;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
         display: flex !important;
         justify-content: flex-end !important; /* Pushes the menu icon to the right side */
-        box-sizing: border-box;
+        box-sizing: border-box !important;
     }
     
     nav {
-        position: relative;
-        width: auto;
-        margin: 0;
-        padding: 0;
+        position: relative !important;
+        width: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
         display: flex !important;
         justify-content: flex-end !important;
     }
