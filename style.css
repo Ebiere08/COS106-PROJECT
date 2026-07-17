@@ -360,7 +360,6 @@ a.contact-text:hover {
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 !important;
-        padding: 0 !important;
         overflow-x: hidden !important; /* Forces layout to stay strictly vertical */
         box-sizing: border-box !important;
     }
@@ -412,7 +411,7 @@ a.contact-text:hover {
         padding: 4px 0 !important;
     }
     nav ul li a.current-page{
-        display: none;
+        display: none !important;
     }
 
     /* 2. SIDE-SCROLLING CARD CONTAINER FIXES */
