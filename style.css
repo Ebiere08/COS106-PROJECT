@@ -347,9 +347,8 @@ a.contact-text:hover {
     box-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
 }
 
-@media (max-idth: 768px) {
-    
-
+@media scren and (max-idth: 768px) {
+     
 #home{
     flex-direction: column;
     align-items: center;
