@@ -352,7 +352,11 @@ a.contact-text:hover {
 
     
 
-/* ==========================================================================
+
+   
+
+   
+   /* ==========================================================================
    2. FIXED MOBILE STYLES (Keeps laptop untouched, fixes phone views)
    ========================================================================== */
 
@@ -364,7 +368,7 @@ a.contact-text:hover {
 
     header {
         position: static;
-        padding: 20px 10px;
+        padding: 10px;
     }
 
     nav ul {
@@ -381,12 +385,15 @@ a.contact-text:hover {
         width: 100%;
         padding: 20px;
         margin-top: 10px;
+        height: auto; /* Allows the card container to grow and fit the image */
     }
 
     #home {
-        flex-direction: column-reverse; /* Stacks image beautifully below text on phones */
-        text-align: center;
-        gap: 30px;
+        display: flex !important;
+        flex-direction: column !important; /* Puts the image cleanly on top, text below */
+        align-items: center !important;
+        text-align: center !important;
+        gap: 25px;
     }
 
     .intro-text {
@@ -405,17 +412,29 @@ a.contact-text:hover {
         justify-content: center;
     }
 
-    /* Scales the portrait photo crop down safely for phones so it looks normal */
+    .profile-pic-container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Sets a perfect, scaled portrait frame for mobile screens */
     .profile-pic {
-        width: 100% !important;
-        max-width: 250px !important;   
-        height: 340px !important;      
+        width: 240px !important;   
+        height: 320px !important;      
         object-fit: cover !important;  
+        display: block !important;
+        margin: 0 auto !important;
     }
 
     .planner-input {
         flex-direction: column;
     }
+
+    .planner-input button {
+        padding: 15px;
+    }
+}
 
     .planner-input button {
         padding: 15px;
