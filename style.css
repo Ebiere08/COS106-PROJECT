@@ -390,6 +390,8 @@ a.contact-text:hover {
         width: auto;
         margin: 0;
         padding: 0;
+        display: flex !important;
+        justify-content: flex-end !important;
     }
 
     /* Hides the structural logic checkbox completely */
@@ -400,12 +402,13 @@ a.contact-text:hover {
     /* Styling the clickable Menu Bar Icon (3 horizontal lines) */
     .menu-bar-button {
         display: flex !important;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 28px;
-        height: 20px;
-        cursor: pointer;
-        z-index: 1000;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        width: 28px !important;
+        height: 20px !important;
+        cursor: pointer !important;
+        z-index: 1000 !important;
+        margin-left: auto !important;
     }
 
     .menu-bar-button span {
