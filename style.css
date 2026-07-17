@@ -363,7 +363,7 @@ html, body {
 
 @media screen and (max-width: 768px) {
     body {
-        padding: 10px;
+        padding: 10px 8px;
         min-height: auto;
     }
 
@@ -383,7 +383,7 @@ html, body {
         list-style: none;
         width: 100%;
         padding: 0 5px !important;
-        gap: 10px !important; /* Clean, tight space between links so they fit */
+        gap: 8px !important; /* Clean, tight space between links so they fit */
     }
 
     nav ul li {
@@ -392,19 +392,19 @@ html, body {
 
     nav ul li a {
         font-size: 0.82rem !important; /* Scales text down slightly to fit phone screens */
-        letter-spacing: 0.3px;
+        letter-spacing: 0.2px;
         white-space: nowrap; /* Prevents text from breaking onto a second row */
     }
 
     /* 2. SIDE-SCROLLING CARD CONTAINER FIXES */
     main {
-        width: 100% !important;
-        max-width: 100% !important;
+        width: 94% !important;
+        max-width: 480px !important;
+        margin: 15px auto;
         box-sizing: border-box !important; /* Forces padding to stay inside the boundary */
-        padding: 15px !important; 
+        padding: 20px 15px !important; 
         margin-top: 15px;
         height: auto;
-        overflow-x: hidden; /* Safety lock on the container card itself */
     }
 
     #home {
@@ -453,9 +453,34 @@ html, body {
 
     .planner-input {
         flex-direction: column;
+        gap: 10px;
+    }
+    .planner-input input{
+        width: 100%;
     }
 
     .planner-input button {
-        padding: 15px;
+        padding: 12px;
+        width: 100%;
+    }
+
+
+
+
+
+    /* 3. EMAIL SPILLING FIX (Shrinks font size so it stays whole on one line) */
+    .contact-info a, 
+    .contact-details p,
+    main p {
+        word-wrap: normal !important;
+        word-break: normal !important; /* Prevents text from chopping up */
+    }
+
+    /* Target the specific container or link holding your email address */
+    [href^="mailto:"], 
+    .contact-info,
+    main p:has(a) { 
+        font-size: 0.85rem !important; /* Shrinks the text slightly so it fits the screen width */
+        white-space: nowrap;          /* Forces it to stay on one clean line */
     }
 }
