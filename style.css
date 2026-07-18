@@ -413,8 +413,8 @@ a.contact-text:hover {
     nav {
         position: fixed !important;
         top: 20px !important;
-        right: 20px !important; /* Locks button on top right of the glass screen frame */
-        left: auto !important;
+        left: 20px !important; /* Locks button on top right of the glass screen frame */
+        right: auto !important;
         width: 28px !important;
         height: 20px !important;
         z-index: 99999 !important; /* Floating layer priority override */
@@ -453,8 +453,8 @@ a.contact-text:hover {
         flex-direction: column !important;
         position: absolute !important;
         top: 30px !important;
-        right: 0 !important;
-        left: auto !important; /* Eliminates desktop left side yanks */
+        left: 0 !important;
+        right: auto !important; /* Eliminates desktop left side yanks */
         background-color: #111625 !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: 12px !important;
