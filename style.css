@@ -1,12 +1,16 @@
-header{
+/* ==========================================================================
+   1. DESKTOP STYLES
+   ========================================================================== */
+
+Header{
      background-color: #0f1a2c;
      color: #38bdf8;
      padding: 20px;
-        margin: 0;
-  position: fixed;
-  width: 100%;
-  top: 0%;
-  z-index: 1; 
+     margin: 0;
+     position: fixed;
+     width: 100%;
+     top: 0%;
+     z-index: 1; 
 }     
 
 header h1{
@@ -23,7 +27,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
 nav ul{
     list-style: none;
     padding: 0;
@@ -31,10 +34,11 @@ nav ul{
     top: 15px;
     right: 60px;
     display: flex;
-     position: absolute;
+    position: absolute;
     flex-direction: row;
     gap: 20px;
 }
+
 nav ul li a{
     margin-left: 20px;
     color: aliceblue;
@@ -42,10 +46,10 @@ nav ul li a{
     font-size: 0.9rem;
     font-weight: 500;
 }
+
 nav ul li a:hover{
     color: #a5c2f4;
 }
-
 
 .card{
  background-color: #0a111e;
@@ -59,7 +63,6 @@ nav ul li a:hover{
  padding-right: 30px;
 }
 
-
 .tagline{
     color: #4fc3f7;
     font-size: 1rem;
@@ -69,16 +72,16 @@ nav ul li a:hover{
     text-transform: uppercase;
 }
 
-
 main{
-    margin: 150PX auto;
+    margin: 150px auto;
     max-width: 1000px;
-    width: ;
+    width: 100%; /* Fixed the empty property mistake here */
     padding: 10px;
     background-color: #0f1a2c;
     color: #a5c2f4;
     border-radius: 20px;
 }
+
 main h2{
     color: #e2e8f0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -88,16 +91,14 @@ main h2{
     font-size: 1.5rem;
 }
 
-
 img{
-    width: 295PX;
+    width: 295px;
     height: 380px;
     object-fit: cover;
     border-radius: 24px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     border: 2px solid #00d2ff;
 }
-
 
 #home{
     display: flex;
@@ -112,6 +113,7 @@ img{
     padding: 40px;
     margin-top: 100px;
 }
+
 #about h2{
     color: aqua;
     font-size:2.5rem ;
@@ -119,18 +121,19 @@ img{
     text-align: center;
     margin-top: 10px;
 }
+
 #about p,
 #about li{
     font-size: 0.95rem;
     margin-bottom: 25px;
     color: #a5c2f4;
 }
+
 #about h3{
     text-align: center;
     color: aqua;
-    font-size: 1.5;
+    font-size: 1.5rem;
 }
-
 
 #project-page h2{
     color: aqua;
@@ -138,33 +141,38 @@ img{
     font-weight: 800;
     text-align: center;
 }
+
 #project-page h3{
     color: aqua;
 }
+
 #projects a{
     color:#00d2ff;
 }
+
 #projects p{
     color: #a5c2f4;
 }
  
-
 #planner{
     max-width: 800px;
     width: 90%;
     margin: 40px auto;
     padding: 40px;
 }
+
 #planner h2{
     color: aqua;
     font-size: 3.5rem;
     font-weight: 800;
     text-align: center;
 }
+
 #planner p{
     font-size: 1.2rem;
     margin-bottom: 25px;
 }
+
 #planner .planner-input input{
     font-size: 1.1rem;
     padding: 12px 24px;
@@ -173,30 +181,32 @@ img{
     color: #fff;
     border-radius: 30px;
 }
+
 #planner .planner-input button{
- background: linear-gradient(135deg, #3b82f6, #00d2ff);
-color: #0f1a2c;
-border: none;
-border-radius: 30px;
-padding: 12px 35px;
-font-size: 1rem;
-font-weight: bold;
-cursor: pointer;
-transition: all 0.3s ease, box-shadow 0.3s ease;
-display: inline-block;
-margin-top: 10px;
-margin-left: 10px;
+    background: linear-gradient(135deg, #3b82f6, #00d2ff);
+    color: #0f1a2c;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 10px;
 }
+
 #plannerTable button{
     font-size: 1rem;
     padding: 8px 16px;
 }
+
 #planner .planner-input button:hover{
     transform: translateY(-4px);
     box-shadow: 0 0 20px rgba(0, 210, 255, 0.6), 0 5px 15px rgba(0, 10, 255, 0.4);
 }
 
- 
 .form-group{
     display: flex;
     flex-direction: column;
@@ -204,11 +214,13 @@ margin-left: 10px;
     text-align: left;
     width: 100%; 
 }
+
 .form-group label{
     color: #00d2ff;
     font-weight: bold;
     margin-bottom: 9px;
 }
+
 .form-group input,
 .form-group textarea{
     background-color: #1a2332;
@@ -221,24 +233,25 @@ margin-left: 10px;
     width: 100%;
     box-sizing: border-box;
 }
+
 .submit-btn{
-background: linear-gradient(135deg, #3b82f6, #00d2ff);
-color: #0f1a2c;
-border: none;
-border-radius: 30px;
-padding: 12px 35px;
-font-size: 1rem;
-font-weight: bold;
-cursor: pointer;
-display: inline-block;
-margin-top: 10px;
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #3b82f6, #00d2ff);
+    color: #0f1a2c;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .submit-btn:hover{
     transform: translateY(-4px);
     box-shadow: 0 0 20px rgba( 0, 210, 255, 0.6), 0 5px 15px rgba(0, 210, 255, 0.4);
 }
-
 
 .contact-card {
     max-width: 500px; 
@@ -246,6 +259,7 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 35px 40px;
     text-align: center;
 }
+
 .contact-card-title {
     color: #00f2fe; 
     font-size: 3.5rem;
@@ -254,20 +268,24 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
     font-weight: bold;
     letter-spacing: 1.5px;
 }
+
 .contact-table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 25px; 
 }
+
 .icon-cell {
     width: 45px;
     vertical-align: middle;
 }
+
 .text-cell {
     vertical-align: middle;
     padding-left: 20px;
     text-align: left; 
 }
+
 .icon-wrapper {
     display: flex;
     align-items: center;
@@ -277,22 +295,24 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: rgba(0, 242, 254, 0.1); 
     border-radius: 50%;
 }
+
 .icon-wrapper svg {
     width: 20px;
     height: 20px;
     stroke: #00f2fe;
 }
+
 .contact-text {
     font-size: 1.15rem;
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
 }
+
 a.contact-text:hover {
     color: #00f2fe;
     text-decoration: underline;
 }
-
 
 .site-footer {
     text-align: center;
@@ -300,22 +320,24 @@ a.contact-text:hover {
     margin-top: 60px; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .site-footer p {
     color: rgba(255, 255, 255, 0.6);
     font-size: 1.05rem;
     margin: 5px 0;
     letter-spacing: 0.5px;
 }
+
 .site-footer .footer-subtitle {
     color: rgba(255, 255, 255, 0.4);
     font-size: 0.95rem;
 }
 
-
 .tech-stack-container {
     margin-top: 50px; 
     text-align: left;
 }
+
 .tech-stack-title {
     color: #fff;
     font-size: 1.1rem;
@@ -324,11 +346,13 @@ a.contact-text:hover {
     letter-spacing: 1px;
     margin-bottom: 15px;
 }
+
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 10px; 
 }
+
 .tech-tag {
     background-color: rgba(0, 242, 254, 0.05); 
     border: 1px solid rgba(0, 242, 254, 0.3); 
@@ -340,74 +364,71 @@ a.contact-text:hover {
     transition: all 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     cursor: default;
 }
+
 .tech-tag:hover{
-    transform:  translateY(-3px);
+    transform: translateY(-3px);
     border-color: rgba(0, 242, 254, 0.8);
     box-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
 }
 
-
-
-
-    
-
 /* ==========================================================================
-   2. COMBINED MOBILE STYLES (Clean Menu Bar Dropdown & Layout Restructure)
+   2. COMBINED MOBILE STYLES (Universal Reset & Drawer Engine)
    ========================================================================== */
 
-/* This locks down the entire screen structure so it cannot slide left or right */
-
-
 @media screen and (max-width: 768px) {
-    /* Safe layout resets to protect card boundaries from cutting off */
-    html, body, .container, .wrapper, #root, div:has(main) {
+    /* 1. FORCE HEADER AND BODY RESETS */
+    html, body {
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 !important;
         overflow-x: hidden !important;
-        box-sizing: border-box !important;
     }
 
-    body {
-        padding: 10px 0px;
-        min-height: auto;
-        width: 100%;
-    }
-
-    /* 1. MENU BAR OVERLAY ENGINE */
     Header, header {
         position: relative !important;
-        padding:  20px !important; /* Side padding pushes the button neatly from the edge */
         width: 100% !important;
         max-width: 100% !important;
+        padding: 15px 20px !important;
         margin: 0 !important;
         display: block !important;
+        top: 0 !important;
         box-sizing: border-box !important;
     }
+
+    /* Shrinks your text titles so they don't push layouts off-screen */
     header h1, Header h1 {
-    padding-top: 10px !important;
-    font-size: 2rem !important;
-    text-align: center !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    display: block !important;
-    }
-    
-    body nav, nav {
-        position: absolute !important;
-        top: 25px !important;
-        width: auto !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        z-index: 1001 !important;
+        font-size: 1.8rem !important;
+        text-align: center !important;
+        margin: 0 auto 10px auto !important;
+        padding-top: 10px !important;
+        width: 100% !important;
     }
 
-    /* Hides the structural logic checkbox completely */
+    .tagline {
+        text-align: center !important;
+        font-size: 0.85rem !important;
+        display: block !important;
+    }
+
+    /* 2. ABSOLUTE FIXED POSITIONING FOR THE NAVIGATION MENU BUTTON */
+    nav {
+        position: fixed !important;
+        top: 20px !important;
+        right: 20px !important; /* Locks button on top right of the glass screen frame */
+        left: auto !important;
+        width: 28px !important;
+        height: 20px !important;
+        z-index: 99999 !important; /* Floating layer priority override */
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    /* Hides the logic checkbox structural driver */
     .menu-checkbox {
         display: none !important;
     }
 
-    /* Styling the clickable Menu Bar Icon (3 horizontal lines) */
+    /* Styles the 3-line hamburger button icon */
     .menu-bar-button {
         display: flex !important;
         flex-direction: column !important;
@@ -415,154 +436,107 @@ a.contact-text:hover {
         width: 28px !important;
         height: 20px !important;
         cursor: pointer !important;
-        z-index: 1000 !important;
     }
 
     .menu-bar-button span {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background-color: #ffffff; /* White bars—change this color to match your theme if needed */
-        border-radius: 2px;
-        transition: all 0.3s ease;
+        display: block !important;
+        width: 100% !important;
+        height: 3px !important;
+        background-color: #ffffff !important;
+        border-radius: 2px !important;
     }
 
-    /* Turns your ul list into a hidden, stackable vertical drawer container */
+    /* 3. THE DROPDOWN MENU TRAY CONTAINER */
+    nav ul, 
     nav ul.nav-links {
-        display: none !important; /* Stays hidden out of sight until toggled open */
-        flex-direction: column !important; 
+        display: none !important; /* Completely hidden by default */
+        flex-direction: column !important;
         position: absolute !important;
         top: 30px !important;
         right: 0 !important;
-        background-color: #111625 !important; /* Dark dropdown background card matching your layout */
+        left: auto !important; /* Eliminates desktop left side yanks */
+        background-color: #111625 !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: 12px !important;
-        width: 180px !important;
-        padding: 10px 0 !important;
+        width: 160px !important;
+        padding: 8px 0 !important;
         margin: 0 !important;
+        box-shadow: 0px 8px 24px rgba(0,0,0,0.6) !important;
         list-style: none !important;
-        box-shadow: 0px 8px 16px rgba(0,0,0,0.3) !important;
-        z-index: 999 !important;
     }
 
-    nav ul.nav-links li {
+    nav ul li {
+        width: 100% !important;
         margin: 0 !important;
-        padding: 0;
-        width: 100%;
-        text-align: left !important; /* Align link text nicely inside the dropdown drawer */
+        padding: 0 !important;
+        text-align: left !important;
     }
 
-    nav ul.nav-links li a {
+    nav ul li a {
         display: block !important;
+        width: 100% !important;
         padding: 12px 20px !important;
-        font-size: 0.95rem !important; /* Bumps up font size since it has vertical room */
         color: #ffffff !important;
-        text-decoration: none;
-        width: 100%;
-        box-sizing: border-box;
-        white-space: nowrap;
+        font-size: 0.95rem !important;
+        text-decoration: none !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+        white-space: nowrap !important;
     }
 
-    /* Subtle background highlight for the page you are currently viewing */
-    nav ul.nav-links li a.current-page {
+    nav ul li a.current-page {
         background-color: rgba(255, 255, 255, 0.08) !important;
-        font-weight: bold;
+        font-weight: bold !important;
     }
 
-    /* THE MAGIC CSS HOOK: When the hamburger icon label is tapped, display the list instantly */
+    /* 4. THE ACTION TOGGLE DRIVER */
+    .menu-checkbox:checked ~ ul,
     .menu-checkbox:checked ~ ul.nav-links {
-        display: flex !important;
+        display: flex !important; 
     }
 
-    /* 2. SIDE-SCROLLING CARD CONTAINER FIXES */
+    /* 5. MAIN TEXT CONTENT RESPONSIVE CARD FIXES */
     main {
-        width: 92% !important; /* Pulled slightly down from 100% so the border lines never cut off */
-        max-width: 92% !important;
-        margin: 15px auto !important; /* Centers the main cards perfectly on screen */
-        box-sizing: border-box !important; /* Forces padding to stay inside the boundary */
-        padding: 25px 20px !important; 
-        border-radius: 30px;
-        height: auto;
+        width: 90% !important;
+        max-width: 90% !important;
+        margin: 30px auto !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
     }
 
     #home {
         display: flex !important;
-        flex-direction: column !important; 
+        flex-direction: column !important;
         align-items: center !important;
-        text-align: center !important;
-        gap: 25px;
+        gap: 20px !important;
     }
 
-    .intro-text {
-        max-width: 100%;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    .creative-text {
-        font-size: 0.9rem;
-    }
-
-    .tags {
-        justify-content: center;
-    }
-
-    .profile-pic-container {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .profile-pic {
-        width: 240px !important;   
-        height: 320px !important;      
-        object-fit: cover !important;  
-        display: block !important;
+    img {
+        width: 240px !important;
+        height: 310px !important;
         margin: 0 auto !important;
     }
-    iframe, video, embed {
-        width: 100%;
-        max-width: 100%;
-        height: 200px;
-        border-radius: 10px;
-    }
 
+    /* 6. INPUT AND LAYOUT BREAK FIXES */
     .planner-input {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        width: 100%;
-        box-sizing: border-box;
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
     }
     
-    /* BUG FIXED HERE: Added the missing comma so both inputs and dropdowns expand correctly */
-    .planner-input input,
-    .planner-input select {
-        width: 96%;
-        max-width: 100%;
-        box-sizing: border-box;
+    .planner-input input {
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
-
+    
     .planner-input button {
-        width: auto;
-        min-width: 110px;
-        max-width: 140px;
-        padding: 8px 12px;
-        font-size: 0.82rem;
-        margin: 0 auto;
+        margin: 10px auto 0 auto !important;
     }
 
-    /* 3. EMAIL SPILLING FIX (Shrinks font size so it stays whole on one line) */
-    .contact-info a, 
-    .contact-details p,
-    main p a,
-    .email-text {
-        font-size: 0.9rem;
-        white-space: normal;
-        word-wrap: break-word;
-        word-break: break-all;
+    .contact-info a, .contact-details p, main p a, .email-text {
+        font-size: 0.9rem !important;
+        white-space: normal !important;
+        word-wrap: break-word !important;
+        word-break: break-all !important;
     }
 }
