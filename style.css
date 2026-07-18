@@ -75,7 +75,7 @@ nav ul li a:hover{
 main{
     margin: 150px auto;
     max-width: 1000px;
-    width: 100%; /* Fixed the empty property mistake here */
+    width: 100%;
     padding: 10px;
     background-color: #0f1a2c;
     color: #a5c2f4;
@@ -144,6 +144,18 @@ img{
 
 #project-page h3{
     color: aqua;
+}
+
+/* Responsive video fix - keeps iframes inside their cards at every screen size */
+#project-page iframe {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 12px;
+    border: none;
 }
 
 #projects a{
@@ -409,15 +421,15 @@ a.contact-text:hover {
         display: block !important;
     }
 
-    /* 2. ABSOLUTE FIXED POSITIONING FOR THE NAVIGATION MENU BUTTON */
+    /* 2. ABSOLUTE FIXED POSITIONING FOR THE NAVIGATION MENU BUTTON (LEFT SIDE) */
     nav {
         position: fixed !important;
         top: 20px !important;
-        left: 20px !important; /* Locks button on top right of the glass screen frame */
+        left: 20px !important;
         right: auto !important;
         width: 28px !important;
         height: 20px !important;
-        z-index: 99999 !important; /* Floating layer priority override */
+        z-index: 99999 !important;
         margin: 0 !important;
         padding: 0 !important;
         display: block !important;
@@ -446,15 +458,15 @@ a.contact-text:hover {
         border-radius: 2px !important;
     }
 
-    /* 3. THE DROPDOWN MENU TRAY CONTAINER */
+    /* 3. THE DROPDOWN MENU TRAY CONTAINER (OPENS FROM LEFT) */
     nav ul, 
     nav ul.nav-links {
-        display: none !important; /* Completely hidden by default */
+        display: none !important;
         flex-direction: column !important;
         position: absolute !important;
         top: 30px !important;
         left: 0 !important;
-        right: auto !important; /* Eliminates desktop left side yanks */
+        right: auto !important;
         background-color: #111625 !important;
         border: 1px solid rgba(255, 255, 255, 0.1) !important;
         border-radius: 12px !important;
@@ -538,5 +550,33 @@ a.contact-text:hover {
         white-space: normal !important;
         word-wrap: break-word !important;
         word-break: break-all !important;
+    }
+
+    /* ABOUT SECTION FIX - box-sizing prevents right-edge overflow */
+    #about {
+        width: 90% !important;
+        max-width: 90% !important;
+        padding: 20px !important;
+        margin: 30px auto !important;
+        margin-top: 60px !important;
+        box-sizing: border-box !important;
+    }
+
+    #about h2 {
+        font-size: 1.8rem !important;
+    }
+
+    #about h3 {
+        font-size: 1.2rem !important;
+    }
+
+    #about p,
+    #about li {
+        font-size: 0.9rem !important;
+    }
+
+    /* PROJECT VIDEOS FIX - iframes shrink further on small screens */
+    #project-page iframe {
+        max-width: 100% !important;
     }
 }
