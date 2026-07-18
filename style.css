@@ -382,7 +382,9 @@ a.contact-text:hover {
         max-width: 100% !important;
         margin: 0 !important;
         display: flex !important;
+        flex-direction: row !important;
         justify-content: flex-end !important; /* Pushes the menu icon to the right side */
+        align-items: center !important;
         box-sizing: border-box !important;
     }
     
@@ -410,6 +412,7 @@ a.contact-text:hover {
         cursor: pointer !important;
         z-index: 1000 !important;
         margin-left: auto !important;
+        margin-right: 0 !important;
     }
 
     .menu-bar-button span {
@@ -425,18 +428,18 @@ a.contact-text:hover {
     nav ul.nav-links {
         display: none !important; /* Stays hidden out of sight until toggled open */
         flex-direction: column !important; 
-        position: absolute;
-        top: 35px;
-        right: 0;
-        background-color: #111625; /* Dark dropdown background card matching your layout */
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 12px;
-        width: 180px;
+        position: absolute !important;
+        top: 35px !important;
+        right: 0 !important;
+        background-color: #111625 !important; /* Dark dropdown background card matching your layout */
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 12px !important;
+        width: 180px !important;
         padding: 10px 0 !important;
         margin: 0 !important;
-        list-style: none;
-        box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
-        z-index: 999;
+        list-style: none !important;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.3) !important;
+        z-index: 999 !important;
     }
 
     nav ul.nav-links li {
