@@ -384,7 +384,7 @@ a.contact-text:hover {
 }
 
 /* ==========================================================================
-   2. COMBINED MOBILE STYLES (Universal Reset & Drawer Engine)
+   2. MOBILE STYLES (Hamburger Nav Menu & Responsive Fixes)
    ========================================================================== */
 
 @media screen and (max-width: 768px) {
@@ -421,7 +421,7 @@ a.contact-text:hover {
         display: block !important;
     }
 
-    /* 2. ABSOLUTE FIXED POSITIONING FOR THE NAVIGATION MENU BUTTON (LEFT SIDE) */
+    /* 2. FIXED POSITIONING FOR THE NAVIGATION MENU BUTTON (LEFT SIDE) */
     nav {
         position: fixed !important;
         top: 20px !important;
@@ -501,7 +501,7 @@ a.contact-text:hover {
         font-weight: bold !important;
     }
 
-    /* 4. THE ACTION TOGGLE DRIVER */
+    /* 4. THE ACTION TOGGLE DRIVER - shows menu when checkbox is checked */
     .menu-checkbox:checked ~ ul,
     .menu-checkbox:checked ~ ul.nav-links {
         display: flex !important; 
