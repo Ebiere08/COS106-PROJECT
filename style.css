@@ -406,7 +406,6 @@ a.contact-text:hover {
         box-sizing: border-box !important;
     }
 
-    /* Shrinks your text titles so they don't push layouts off-screen */
     header h1, Header h1 {
         font-size: 1.8rem !important;
         text-align: center !important;
@@ -435,12 +434,10 @@ a.contact-text:hover {
         display: block !important;
     }
 
-    /* Hides the logic checkbox structural driver */
     .menu-checkbox {
         display: none !important;
     }
 
-    /* Styles the 3-line hamburger button icon */
     .menu-bar-button {
         display: flex !important;
         flex-direction: column !important;
@@ -501,7 +498,7 @@ a.contact-text:hover {
         font-weight: bold !important;
     }
 
-    /* 4. THE ACTION TOGGLE DRIVER - shows menu when checkbox is checked */
+    /* 4. THE ACTION TOGGLE DRIVER */
     .menu-checkbox:checked ~ ul,
     .menu-checkbox:checked ~ ul.nav-links {
         display: flex !important; 
@@ -552,7 +549,7 @@ a.contact-text:hover {
         word-break: break-all !important;
     }
 
-    /* ABOUT SECTION FIX - box-sizing prevents right-edge overflow */
+    /* ABOUT SECTION FIX */
     #about {
         width: 90% !important;
         max-width: 90% !important;
@@ -575,8 +572,45 @@ a.contact-text:hover {
         font-size: 0.9rem !important;
     }
 
-    /* PROJECT VIDEOS FIX - iframes shrink further on small screens */
+    /* PROJECT VIDEOS FIX */
     #project-page iframe {
         max-width: 100% !important;
+    }
+
+    /* PLANNER SECTION FIX */
+    #planner {
+        width: 90% !important;
+        max-width: 90% !important;
+        padding: 20px !important;
+        margin: 30px auto !important;
+        margin-top: 60px !important;
+        box-sizing: border-box !important;
+    }
+
+    #planner h2 {
+        font-size: 2.2rem !important;
+    }
+
+    /* CONTACT CARD FIX */
+    .contact-card {
+        width: 90% !important;
+        max-width: 90% !important;
+        padding: 25px 20px !important;
+        margin: 60px auto 30px auto !important;
+        box-sizing: border-box !important;
+    }
+
+    .contact-card-title {
+        font-size: 2.2rem !important;
+    }
+
+    .text-cell {
+        padding-left: 12px !important;
+        word-break: break-word !important;
+    }
+
+    .contact-text {
+        font-size: 1rem !important;
+        word-break: break-word !important;
     }
 }
